@@ -15,6 +15,8 @@ public Database(double bL, double bH,double bW, double bWe, String bD)
 	boxWidth = bW;
 	boxWeight = bWe;
 	boxDestination = bD;
+	
+	System.out.println("");
 	}
 
 public double getBoxLength()
@@ -26,6 +28,7 @@ public void setBoxLength(double boxLength)
 	{
 	this.boxLength = boxLength;
 	}
+
 
 
 
