@@ -155,7 +155,8 @@ public class Database {
 				System.out.println("\tTOTAL: \t$" + (shippingCost + userBoxCost)+ "0");
 			}
 			
-			if(userAnswer2 == 2)//info not correct
+			
+			while(userAnswer2 == 2)//info not correct
 			{
 System.out.println("Please re-enter the number of the standard box above that you would like to purchase. (1-5)");
 			
