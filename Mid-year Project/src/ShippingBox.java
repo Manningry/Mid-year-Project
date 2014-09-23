@@ -17,6 +17,21 @@ public class ShippingBox
 
 		}
 
+	public String toString()
+		{
+		return "You Chose:\t" + "\n\n" + boxName + "\n" +
+		 "\n\tLength:\t  " + boxLength +
+		 "\t\n\tWidth:\t  " + boxWidth +
+		 "\t\n\tHeight:\t  " + boxHeight;
+	
+		
+		}
+	
+	
+	
+	
+	
+	
 	public String getboxName()
 		{
 		return boxName;

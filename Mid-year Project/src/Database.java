@@ -20,6 +20,7 @@ public class Database {
 	static double userWidth;
 	static double userHeight;
 	static int userAnswer2;
+	
 	static double userWeight;
 	static double shippingCost;
 	static double userBoxCost;
@@ -39,55 +40,42 @@ public class Database {
 		if(userAnswer == 1)//purchase a box
 		{
 			System.out.println("Great! Please enter the number of the standard box above that you would like to purchase. (1-5)");
-			
+			System.out.println("");
 			standardBoxChoice = userInput.nextInt();
 			
 			//making sure standardBoxChoice has correct dimensions
 			
+			
 			if(standardBoxChoice == 1)
 				{
-				System.out.println("You chose: Small Box");
-				System.out.println("\tLength:\t 5.5\"");
-				System.out.println("\tWidth:\t 3.5\"");
-				System.out.println("\tHeight:\t 1.0\"");
+				System.out.println(database.get(0));
 				}
 			
 			if(standardBoxChoice == 2)
 				{
-				System.out.println("You chose: Medium Box 1");
-				System.out.println("\tLength:\t 8.5\"");
-				System.out.println("\tWidth:\t 5.5\"");
-				System.out.println("\tHeight:\t 1.5\"");
-				}
+				System.out.println(database.get(1));
 			
 			if(standardBoxChoice == 3)
 				{
-				System.out.println("You chose: Medium Box 2");
-				System.out.println("\tLength:\t 12.0\"");
-				System.out.println("\tWidth:\t 8.0\"");
-				System.out.println("\tHeight:\t 6.0\"");
+				System.out.println(database.get(2));
 				}
 			
 			if(standardBoxChoice == 4)
 				{
-				System.out.println("You chose: Large Box 1");
-				System.out.println("\tLength:\t 14.0\"");
-				System.out.println("\tWidth:\t 12.0\"");
-				System.out.println("\tHeight:\t 3.5\"");
+				System.out.println(database.get(3));
 				}
 			
 			if(standardBoxChoice == 5)
 				{
-				System.out.println("You chose: Large Box 2");
-				System.out.println("\tLength:\t 12.0\"");
-				System.out.println("\tWidth:\t 12.0\"");
-				System.out.println("\tHeight:\t 6.0\"");
+				System.out.println(database.get(4));
 				}
+			
 			
 			System.out.println("");
 			System.out.println("");
 			System.out.println("Is this correct? (Enter 1 for yes or 2 for no)");
 			userAnswer2 = userInput.nextInt();
+			
 			
 			if(userAnswer2 == 1)//info correct
 			{
@@ -155,10 +143,10 @@ public class Database {
 				System.out.println("\tTOTAL: \t$" + (shippingCost + userBoxCost)+ "0");
 			}
 			
-			
-			while(userAnswer2 == 2)//info not correct
-			{
-System.out.println("Please re-enter the number of the standard box above that you would like to purchase. (1-5)");
+		
+			if(userAnswer2 == 2)//info not correct
+	
+			System.out.println("Please re-enter the number of the standard box above that you would like to purchase. (1-5)");
 			
 			standardBoxChoice = userInput.nextInt();
 			
@@ -166,43 +154,30 @@ System.out.println("Please re-enter the number of the standard box above that yo
 			
 			if(standardBoxChoice == 1)
 				{
-				System.out.println("You chose: Small Box");
-				System.out.println("\tLength:\t 5.5\"");
-				System.out.println("\tWidth:\t 3.5\"");
-				System.out.println("\tHeight:\t 1.0\"");
+				System.out.println(database.get(0));
 				}
 			
 			if(standardBoxChoice == 2)
 				{
-				System.out.println("You chose: Medium Box 1");
-				System.out.println("\tLength:\t 8.5\"");
-				System.out.println("\tWidth:\t 5.5\"");
-				System.out.println("\tHeight:\t 1.5\"");
+				System.out.println(database.get(0));
 				}
 			
 			if(standardBoxChoice == 3)
 				{
-				System.out.println("You chose: Medium Box 2");
-				System.out.println("\tLength:\t 12.0\"");
-				System.out.println("\tWidth:\t 8.0\"");
-				System.out.println("\tHeight:\t 6.0\"");
+				System.out.println(database.get(0));
 				}
 			
 			if(standardBoxChoice == 4)
 				{
-				System.out.println("You chose: Large Box 1");
-				System.out.println("\tLength:\t 14.0\"");
-				System.out.println("\tWidth:\t 12.0\"");
-				System.out.println("\tHeight:\t 3.5\"");
+				System.out.println(database.get(0));
 				}
 			
 			if(standardBoxChoice == 5)
 				{
-				System.out.println("You chose: Large Box 2");
-				System.out.println("\tLength:\t 12.0\"");
-				System.out.println("\tWidth:\t 12.0\"");
-				System.out.println("\tHeight:\t 6.0\"");
+				System.out.println(database.get(0));
 				}
+			
+				System.out.println("");
 				System.out.println("Please enter the weight of the item(s) that you would like to ship. (In pounds)");
 				userWeight = userInput.nextDouble();
 				
@@ -267,6 +242,7 @@ System.out.println("Please re-enter the number of the standard box above that yo
 				System.out.println("\tTOTAL: \t$" + (shippingCost + userBoxCost)+ "0");
 		}
 		}
+		
 		if(userAnswer == 2)//use their own box
 		{
 			System.out.println("We can ship your own box for great rates!");
@@ -457,6 +433,7 @@ System.out.println("Please re-enter the number of the standard box above that yo
 			}
 		}
 		}
+		
 		
 
 	
