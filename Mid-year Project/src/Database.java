@@ -29,6 +29,8 @@ public class Database {
 
 		Scanner userInput = new Scanner(System.in);
 		
+		// asks user if they'd like to buy a box or use their own 
+		
 		System.out.println("Would you like to:");
 		System.out.println("\t1) Purchase one of our standard sized boxes to use?");
 		System.out.println("\t2) Use your own for a small fee?");
@@ -82,7 +84,7 @@ public class Database {
 				System.out.println("Please enter the weight of the item(s) that you would like to ship. (In pounds)");
 				userWeight = userInput.nextDouble();
 				
-				//price for buying standard box
+				//price for the buying standard box they chose
 				
 				if(standardBoxChoice == 1)
 				{
@@ -109,7 +111,7 @@ public class Database {
 						userBoxCost = 9.50;
 					}
 				
-				//price for box weight 
+				//price for items they are shipping based on weight 
 				
 				if(userWeight <= 5)
 				{
@@ -140,6 +142,8 @@ public class Database {
 				System.out.println("\t$" + userBoxCost +"0\tFor purchasing standard box " + standardBoxChoice);
 				System.out.println("\t$" + shippingCost + "0\tBased on the weight of your box");
 				System.out.println("");
+				
+				// add 0 to end because shippingCost/userBoxCost are doubles, so another 0 will give two decimal places
 				System.out.println("\tTOTAL: \t$" + (shippingCost + userBoxCost)+ "0");
 			}
 			
@@ -159,24 +163,26 @@ public class Database {
 			
 			if(standardBoxChoice == 2)
 				{
-				System.out.println(database.get(0));
+				System.out.println(database.get(1));
 				}
 			
 			if(standardBoxChoice == 3)
 				{
-				System.out.println(database.get(0));
+				System.out.println(database.get(2));
 				}
 			
 			if(standardBoxChoice == 4)
 				{
-				System.out.println(database.get(0));
+				System.out.println(database.get(3));
 				}
 			
 			if(standardBoxChoice == 5)
 				{
-				System.out.println(database.get(0));
+				System.out.println(database.get(4));
 				}
 			
+			// customer only gets two chances to pick right box (if they can't do it after two, probably shouldn't be using a computer)
+				
 				System.out.println("");
 				System.out.println("Please enter the weight of the item(s) that you would like to ship. (In pounds)");
 				userWeight = userInput.nextDouble();
@@ -208,7 +214,7 @@ public class Database {
 							userBoxCost = 9.50;
 						}
 				
-				//price for box weight 
+				//price to ship items in box based on weight 
 				
 				if(userWeight <= 5)
 				{
@@ -243,7 +249,7 @@ public class Database {
 		}
 	
 		
-		if(userAnswer == 2)//use their own box
+		if(userAnswer == 2)//customer wants to ship their own box
 		{
 			System.out.println("We can ship your own box for great rates!");
 			System.out.println("");
@@ -259,6 +265,8 @@ public class Database {
 			System.out.println("");
 			System.out.println("Height (in inches):\t");
 			userHeight = userInput.nextDouble();
+			
+			// checking to make sure the dimensions are correct
 			
 			System.out.println("Here are the dimensions of your box:");
 			System.out.println("");
@@ -301,7 +309,7 @@ public class Database {
 					shippingCost = 100;
 					}
 				
-				//Determine cost to ship based on size
+				//Determine cost to ship based on size of box they entered
 				
 				if(userLength <= 6 && userWidth <= 6)
 				{
@@ -312,6 +320,11 @@ public class Database {
 				{
 					userBoxCost = 2.50;
 				}
+				
+				if(userLength <=6 && userWidth >6)
+					{
+					userBoxCost = 5.00;
+					}
 				
 				if((userLength <= 10 && userLength > 6)  && userWidth <= 6)
 				{
@@ -346,7 +359,7 @@ public class Database {
 			}
 				
 			
-			if(userAnswer2 == 2)//info not correct
+			if(userAnswer2 == 2)//customer did not enter the correct dimensions
 			{
 				System.out.println("Please re-enter the dimensions of your box that you would like to ship.");
 				System.out.println("");
@@ -398,7 +411,7 @@ public class Database {
 					shippingCost = 100;
 					}
 				
-				//Determine cost to ship based on size
+				//Determine cost to ship based on size of customer's box
 				
 				if(userLength <= 6 && userWidth < 6)
 				{
@@ -436,6 +449,9 @@ public class Database {
 				
 	public static void ProgramIntro() {
 
+	// Introduction that displays the ArrayList database to the user
+	
+	
 		System.out.println("");
 		System.out.println("Welcome to the Denver-Area Postal Office! Our standard sized boxes are as follows:");
 		System.out.println("");

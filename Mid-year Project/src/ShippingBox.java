@@ -28,10 +28,6 @@ public class ShippingBox
 		}
 	
 	
-	
-	
-	
-	
 	public String getboxName()
 		{
 		return boxName;
