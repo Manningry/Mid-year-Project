@@ -20,7 +20,6 @@ public class Database {
 	static double userWidth;
 	static double userHeight;
 	static int userAnswer2;
-	
 	static double userWeight;
 	static double shippingCost;
 	static double userBoxCost;
@@ -54,7 +53,8 @@ public class Database {
 			if(standardBoxChoice == 2)
 				{
 				System.out.println(database.get(1));
-			
+				}
+				
 			if(standardBoxChoice == 3)
 				{
 				System.out.println(database.get(2));
@@ -241,7 +241,7 @@ public class Database {
 				System.out.println("");
 				System.out.println("\tTOTAL: \t$" + (shippingCost + userBoxCost)+ "0");
 		}
-		}
+	
 		
 		if(userAnswer == 2)//use their own box
 		{
@@ -433,11 +433,7 @@ public class Database {
 			}
 		}
 		}
-		
-		
-
-	
-
+				
 	public static void ProgramIntro() {
 
 		System.out.println("");
